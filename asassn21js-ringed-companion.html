@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- Original template web tab header-->
+		<!--
+		<title>Forty by HTML5 UP</title>
+		-->
+		<title>Theofilus Hobba P.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -> the top-most texts on the website -->
+					<header id="header">
+						<!-- Original template header -->
+						<!--
+						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
+						-->
+						<nav> <!-- calling navigation menu -->
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li> 
+							<li><a href="profile.html">About Me</a></li>
+							<!-- Link website with CV PDF (TODO: check and update link PATH) -->
+							<li><a href=".\assets\pdf\CV_Master_With_Photo.pdf">CV</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="public-outreach.html">Public Outreach</a></li>
+							<li><a href="gallery.html">Gallery</a></li>
+						</ul>
+						<!-- Eg for action buttons
+						<ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul>
+						-->
+						<ul class="actions stacked">
+							<li><a href="#contact" class="button fit">Get in touch!</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- Content -->
+							<section id="content">
+								<div class="inner">
+									<header class="major">
+										<h1>ASASSN-21js: A Multi-Year Transit of a Ringed Disc</h1>
+										<i>Written by: Theofilus Hobba Pramono | 10 February 2025 | Approximate reading time: 3 minutes</i>
+									</header>
+									<span class="image main" style="font-size:12px;">
+										<img src="images/research_projects/asassn21js/lc_model.png" alt="ASASSN-21js_light_curve_model" />
+										<center><i>Model of ASASSN-21js and its companion's rings (top) with the corresponding light curve (middle) and residuals (bottom). <br />Figure source: Pramono, Kenworthy, and van Boekel (2024).</i></center>
+									</span>
+									
+									<p>Every other star dims and brightens. 
+									These are called variable stars. 
+									Some return to their original brightness in hours. 
+									Others need weeks or even months. 
+									Many things can cause dimming, from stellar spots to exoplanet transits. 
+									Some causes are understood better than others. 
+									Whatever they may be, astronomers try their best to find out. </p>
+									
+									<p>Enter ASASSN-21js. 
+									In 2021, this southern star had its brightness suddenly plunged. 
+									It reached rock bottom at 80% of its original flux (or brightness) in only 10 months. 
+									Then, it rapidly brightened before the rate dropped considerably. 
+									To this date, it is still slowly yet steadily brightening. 
+									Thus, ASASSN-21js' light curve is unique as it is unfinished, more than 2 years since the dim started. </p>
+																		
+									<p>As a whole, this star is quite peculiar. 
+									It did not show any variability before 2021, at least as far back as observations go for this star. 
+									Its light curve is asymmetrical. 
+									And the star seems to brighten 'reluctantly'. 
+									One question hovers above all these: what causes ASASSN-21js to dim? </p>
+									
+									<p>My master's research aimed to answer that question with the best possible explanation. 
+									I used Python to run various scenarios to recreate the light curve. 
+									Once there was a match, I ran similar scenarios with slightly varied parameters. 
+									The reran would cover different situations on how the dimming event might end. 
+									The overall outcome could help constrain and test the proposed scenario. </p>
+									
+									<p>The dimming event is likely not caused by the star due to its length. 
+									Something must have moved before the star, blocking its light. 
+									This process, called a transit, may involve a variety of objects, from exoplanets to dusty blobs. 
+									An asymmetrical light curve eliminated an exoplanet transit and spherical dust blob. 
+									The next logical explanation would be a transiting secondary body with a disc/ring system. 
+									The rest of my research focused on this scenario.</p>
+									
+									<p>I utilized Prof Matthew Kenworthy's <a href="https://github.com/mkenworthy/exorings">exorings3</a> package to build the disc/ring system. 
+									In the beginning, I tried three models. 
+									The first was two concentric discs, the larger being more translucent than the smaller. 
+									The second was a reverse of the first approach. 
+									The third was making the smaller disc translucent, creating a ring system. 
+									The last approach turned out capable of recreating the deep dip. 
+									Hence, I proceeded with it. </p> 
+									
+									<p>Upon further investigation, the dip seems to happen in two stages. 
+									The first happened around one year before the plunge. 
+									This dip only lowered the star's flux by around 1 per cent. 
+									The shallow dip may hint at a second outer ring that is more translucent than the inner. 
+									My further models would then use this configuration. </p>
+									
+									<p>While recreating the light curve with different ring system parameters, some models support the existence of a gap. 
+									The gap, albeit narrow in comparison with the radius of the system, is intriguing. 
+									A gap may sign at a small body clearing debris from what was previously a single disc, like an exomoon. 
+									Whether a gap truly exists or not is open for further discussion. </p>
+									
+									<p>The results of the model runs are fascinating. 
+									The average ring system radius measures 2.3 au while the inner ring's radius spans 1.5 au, roughly a Sun-Mars distance. 
+									Rings this size are rare, assuming the owner is a celestial body less massive than ASASSN-21js. 
+									Two other star systems with similarly ringed companions are J1407 and PDS 110. </p>
+									
+									<p>The 'steep' flux drop corresponds to a transversal velocity of only around 0.6 km/s. 
+									Even Pluto orbits the Sun almost 8 times faster. 
+									Assuming ASASSN-21js' companion has a circular orbit, it will be around 12000 au away from the star. 
+									In our Solar System scale, the companion would become an Oort Cloud inhabitant. 
+									There are a few very widely separated star-planet systems known so far. 
+									The widest is COCONUTS 2 and 2b with a 6000 au separation.  </p>
+									
+									<p>Deciding if this model is the truth remains an open question. 
+									Modelling ASASSN-21js' SED suggests the star is an A-type star, around 4.5 times more massive than the Sun. 
+									This information suggests ASASSN-21js' companion to be gravitationally bound to its star. 
+									Still, stars with such a high mass are rare. 
+									Therefore, the odds of observing one similar to ASASS-21js will be extremely low, less than half a per cent per 60 million stars ASASSN observes. </p>
+																	
+									<p>Overall, ASASSN-21js is a unique system. 
+									Whether the exact cause will become clear needs a complete light curve. 
+									If the current model holds, the transit will end by 2027. 
+									Thus, there is still enough time to do follow-up observations. 
+									Any chance of observing in wavelengths other than visual (ASASSN's main filter band) will become a great opportunity. 
+									With the aid of multiwavelength data, it will be possible to derive other ring characteristics, such as grain size. </p>								
+							
+									<p><i>Additional information: The work in this article is my master's research thesis under the supervision of Prof Matthew 
+									A. Kenworthy at Leiden University; submitted on July 2023.</i></p>
+									
+									<div class="box">
+										<header class="major">
+											<h3>Publication</h3>
+										</header>
+										<a href="https://doi.org/10.1051/0004-6361/202450288">Pramono, T., Kenworthy, M., & Van Boekel, R. (2024). ASASSN-21js: A multi-year transit of a ringed disc. Astronomy and Astrophysics. https://doi.org/10.1051/0004-6361/202450288</a>
+									</div>
+									<ul class="actions">
+										<li><a href="research.html" class="button primary">Back to all research</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Contact -->
+					<section id="contacts">
+						<div class="inner">
+							<center><h2> Get in touch! </h2></center>
+							
+							<div class="row">
+								<div class="col-4 col-12-small">
+									<div class="contact-method">
+									<span class="icon solid alt fa-envelope"></span>
+									<!--<h3>Email</h3>-->
+									<a href="mailto:thobbap@gmail.com">thobbap[at]gmail.com</a>
+									</div>
+								</div>
+								
+								<div class="col-4 col-12-small">
+									<div class="contact-method">
+									<span class="icon solid alt fa-phone"></span>
+									<!--<h3>Telephone</h3>-->
+									<span>(+62) 831-7452-7699</span>
+									</div>
+								</div>
+							
+								<div class="col-4 col-12-small">
+									<div class="contact-method">
+									<span class="icon solid alt fa-home"></span>
+									<!--<h3>Address<h3>-->
+									<span>Surakarta, Central Java <br /> Indonesia</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li> -->
+								<!-- <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+								<li><a href="https://www.instagram.com/theofilushobba22/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/TheoHobba" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/theofilus-hobba-pramono/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://medium.com/@thobbap" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Theofilus Hobba P-2025</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
